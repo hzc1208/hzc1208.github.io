@@ -8,13 +8,9 @@ title: Awards
 
 
 
-## Competitions
-
-
-
 ## Honors
 
 
 
-## Services
+## Competitions
 
