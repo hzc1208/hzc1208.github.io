@@ -4,9 +4,7 @@ layout: page
 
 ## About Me
 
-Hi, here is **Zecheng Hao (Jason, 郝泽成)**.<br>
-
-I am a PhD student majoring in **Visual Information Processing**, **Brain-inspired Intelligence** and **Neuromorphic Computing**. I am currently focused on **learning and inference of Spiking Neural Networks (SNNs)**.
+Hi, here is **Zecheng Hao (Jason, 郝泽成)**. I am a PhD student majoring in **Visual Information Processing**, **Brain-inspired Intelligence** and **Neuromorphic Computing**. I am currently focused on **learning and inference of Spiking Neural Networks (SNNs)**.
 
 
 
