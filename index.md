@@ -10,13 +10,9 @@ Hi, here is **Zecheng Hao (Jason, 郝泽成)**. I am a PhD student majoring in *
 
 ## Education & Career History
 
-* **PhD student：**[**School of Computer Science**](https://cs.pku.edu.cn/English/Home.htm), [**Peking University**](https://english.pku.edu.cn/)，*2023-2028*<br>
+* **PhD student：**[**School of Computer Science**](https://cs.pku.edu.cn/English/Home.htm), [**Peking University**](https://english.pku.edu.cn/)，*2023-2028*<br>**Undergrad student：**[**School of Computer Science**](https://cs.pku.edu.cn/English/Home.htm), [**Peking University**](https://english.pku.edu.cn/)，*2019-2023*
 
-  **Undergrad student：**[**School of Computer Science**](https://cs.pku.edu.cn/English/Home.htm), [**Peking University**](https://english.pku.edu.cn/)，*2019-2023*
-
-* **PhD Advisor：**[**Prof. Tiejun Huang**](https://scholar.google.com/citations?user=knvEK4AAAAAJ)，*2023-2028*<br>
-
-  **PhD Advisor：**[**Prof. Zhaofei Yu**](https://yuzhaofei.github.io/)，*2023-2028*
+* **PhD Advisor：**[**Prof. Tiejun Huang**](https://scholar.google.com/citations?user=knvEK4AAAAAJ)，*2023-2028*<br>**PhD Advisor：**[**Prof. Zhaofei Yu**](https://yuzhaofei.github.io/)，*2023-2028*
 
 
 
