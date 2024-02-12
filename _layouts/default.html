@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+<link rel="stylesheet" href="assets/css/main.css">
   <head>
     <meta charset="UTF-8">
 
@@ -14,12 +15,26 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
+              {% for link in site.data.navigation.main %}
+                <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
+      <h2 class="project-tagline">{{ site.description }}</h2>
       {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar </a>
         <a href="{{ site.github.tar_url }}" class="btn"> Semantic Scholar </a>
@@ -27,7 +42,14 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+            {{ content }}
+          </section>
+        </div>
+      </article>
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
