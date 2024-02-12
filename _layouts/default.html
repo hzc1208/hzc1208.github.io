@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
   <head>
     <meta charset="UTF-8">
 
 {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -35,11 +36,11 @@
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">{{ site.description }}</h2>
       {% if site.show_downloads %}
-	<a href="{{ site.dblp-url }}" class="btn"><i class="ai ai-dblp ai-fw" aria-hidden="true"></i> DBLP </a>
+	<a href="{{ site.dblp-url }}" class="btn"><i class="ai ai-dblp ai-fw"></i> DBLP </a>
 	<a href="{{ site.github-url }}" class="btn"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github </a>
         <a href="{{ site.google-scholar }}" class="btn"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar </a>
 	<a href="{{ site.orcid-url }}" class="btn"><i class="ai ai-orcid-square ai-fw"></i> ORCID </a>
-	<a href="{{ site.researchgate-url }}" class="btn"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate </a>  
+	<a href="{{ site.researchgate-url }}" class="btn"><i class="fab fa-fw fa-researchgate"></i> ResearchGate </a>  
       {% endif %}
     </header>
 

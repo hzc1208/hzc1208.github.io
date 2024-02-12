@@ -1,5 +1,6 @@
 ---
 layout: default
+author_profile: false
 ---
 
 # 🧑‍🎨 About Me
@@ -10,7 +11,7 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 # 🔥 News
 
-- *2024.02*: &nbsp;🎉 3 papers have been accepted by ICLR 2024, including 2 first-authored papers. I will participate in the review of ICML 2024.
+- *2024.02* : &nbsp;🎉 3 papers have been accepted by ICLR 2024, including 2 first-authored papers. I will participate in the review of ICML 2024.
 
 
 
@@ -21,7 +22,7 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 **A Progressive Training Framework for Spiking Neural Networks with Learnable Multi-hierarchical Model**
 
-📰[**Paper**]([https://openreview.net/forum?id=g52tgL8jy6) $\textbf{|}$ **ICLR 2024**
+📰[**Paper**]([https://openreview.net/forum?id=g52tgL8jy6) **|** **ICLR 2024**
 
 **Zecheng Hao**, Xinyu Shi, Zihan Huang, Tong Bu, Zhaofei Yu, Tiejun Huang
 
@@ -33,7 +34,7 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 **Threaten Spiking Neural Networks through Combining Rate and Temporal Information**
 
-📰[**Paper**](https://openreview.net/forum?id=xv8iGxENyI) $\textbf{|}$ **ICLR 2024**
+📰[**Paper**](https://openreview.net/forum?id=xv8iGxENyI) **|** **ICLR 2024**
 
 **Zecheng Hao**, Tong Bu, Xinyu Shi, Zihan Huang, Tiejun Huang, Zhaofei Yu
 </div>
@@ -44,7 +45,7 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 **Bridging the Gap between ANNs and SNNs by Calibrating Offset Spikes**
 
-🖥️[**Code**](https://github.com/hzc1208/ANN2SNN_COS) ![](https://img.shields.io/github/stars/hzc1208/ANN2SNN_COS?style=social) $\textbf{|}$ 📰[**Paper**](https://openreview.net/forum?id=PFbzoWZyZRX) $\textbf{|}$ **ICLR 2023**
+🖥️[**Code**](https://github.com/hzc1208/ANN2SNN_COS) ![](https://img.shields.io/github/stars/hzc1208/ANN2SNN_COS?style=social) **|** 📰[**Paper**](https://openreview.net/forum?id=PFbzoWZyZRX) **|** **ICLR 2023**
 
 **Zecheng Hao**, Jianhao Ding, Tong Bu, Tiejun Huang, Zhaofei Yu
 </div>
@@ -55,7 +56,7 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 **Reducing ANN-SNN Conversion Error through Residual Membrane Potential**
 
-🖥️[**Code**](https://github.com/hzc1208/ANN2SNN_SRP) ![](https://img.shields.io/github/stars/hzc1208/ANN2SNN_SRP?style=social) $\textbf{|}$ 📰[**Paper**](https://arxiv.org/abs/2302.02091) $\textbf{|}$ **AAAI 2023, Oral**
+🖥️[**Code**](https://github.com/hzc1208/ANN2SNN_SRP) ![](https://img.shields.io/github/stars/hzc1208/ANN2SNN_SRP?style=social) **|** 📰[**Paper**](https://arxiv.org/abs/2302.02091) **|** **AAAI 2023, Oral**
 
 **Zecheng Hao**, Tong Bu, Jianhao Ding, Tiejun Huang, Zhaofei Yu
 </div>
@@ -65,17 +66,13 @@ I work at *National Engineering Research Center of Visual Technology, Peking Uni
 
 `ICLR 2024, Spotlight` **Towards Energy Efficient Spiking Neural Networks: An Unstructured Pruning Framework**
 
-📰[**Paper**](https://openreview.net/forum?id=eoSeaK4QJo) 
-
-Xinyu Shi, Jianhao Ding, **Zecheng Hao**, Zhaofei Yu
+Xinyu Shi, Jianhao Ding, **Zecheng Hao**, Zhaofei Yu **|** 📰[**Paper**](https://openreview.net/forum?id=eoSeaK4QJo) 
 
 
 
 `CVPR 2023	` **Rate Gradient Approximation Attack Threats Deep Spiking Neural Networks**
 
-🖥️[**Code**](https://github. com/putshua/SNN_attack_RGA) $\textbf{|}$ 📰[**Paper**](http://openaccess.thecvf.com/content/CVPR2023/html/Bu_Rate_Gradient_Approximation_Attack_Threats_Deep_Spiking_Neural_Networks_CVPR_2023_paper.html)
-
-Tong Bu, Jianhao Ding, **Zecheng Hao**, Zhaofei Yu
+Tong Bu, Jianhao Ding, **Zecheng Hao**, Zhaofei Yu **|** 🖥️[**Code**](https://github. com/putshua/SNN_attack_RGA) **|** 📰[**Paper**](http://openaccess.thecvf.com/content/CVPR2023/html/Bu_Rate_Gradient_Approximation_Attack_Threats_Deep_Spiking_Neural_Networks_CVPR_2023_paper.html)
 
 
 
@@ -86,7 +83,7 @@ Tong Bu, Jianhao Ding, **Zecheng Hao**, Zhaofei Yu
 <div class='paper-box-text' markdown="1">
 
 
-*2023.06* Excellent Undergraduate Thesis of Peking University
+*2023.06* : Excellent Undergraduate Thesis of Peking University
 
 </div>
 </div>
