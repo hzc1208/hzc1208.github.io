@@ -7,4 +7,77 @@ dblp-url: https://dblp.org/pid/339/6969.html
 github-url: https://github.com/hzc1208
 google-scholar: https://scholar.google.com/citations?user=txTkX7YAAAAJ
 orcid-url: https://orcid.org/0000-0001-9074-2857
-researchgate-url: https://www.researchgate.net/profile/Zecheng-Hao/research
+semantic-url: https://www.semanticscholar.org/author/Zecheng-Hao/2204581289
+
+# Site Author
+author:
+  name             : "Zecheng Hao (郝泽成)"
+  avatar           : "images/me.jpg"
+  bio              : "PhD student"
+  location         : "Beijing, China"
+  employer         :
+  pubmed           : 
+  googlescholar    : 
+  email            : "haozecheng@pku.edu.cn"
+  researchgate     : 
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : 
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  lastfm           :
+  linkedin         : # e.g., "linkedin username"
+  dblp             :  # e.g., "https://dblp.org/pid/xx/xxxx.html"
+  orcid            :  # e.g., "https://orcid.org/xxxx"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : "https://twitter.com/zechenghao9"
+  vine             :
+  weibo            : "https://weibo.com/u/7772934388"
+  xing             :
+  youtube          :
+  wikipedia        :
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
