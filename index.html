@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zecheng Hao's Academic Homepage</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --accent-primary: #8b5cf6;
+            --accent-secondary: #3b82f6;
+            --accent-glow: rgba(139, 92, 246, 0.4);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: rgba(148, 163, 184, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { text-shadow: 0 0 5px var(--accent-glow); }
+            50% { text-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow); }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a2e 50%, var(--bg-primary) 100%);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+            min-height: 100vh;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2.5rem 0 3.5rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            margin: 0.75rem 0 1.25rem;
+            font-weight: 400;
+        }
+        
+        .affiliation {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin: 1rem 0 1.75rem;
+            line-height: 1.7;
+        }
+        .affiliation a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        .affiliation a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-primary);
+            transition: var(--transition);
+        }
+        .affiliation a:hover::after { width: 100%; }
+        .affiliation a:hover { color: var(--accent-primary); }
+        
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            justify-content: center;
+            margin: 1.75rem 0;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.7rem 1.4rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 0.98rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::before { left: 100%; }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+        }
+        .btn:active { transform: translateY(0); }
+
+        .btn-outline {
+            position: relative;
+            background: 
+                linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                linear-gradient(135deg, var(--accent-secondary), var(--accent-primary)) border-box;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-weight: 500;
+            padding: 0.65rem 1.3rem;
+            transition: var(--transition);
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: pointer;
+        }
+        .btn-outline .btn-text {
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            transition: var(--transition);
+        }
+        .btn-outline:hover {
+            transform: translateY(-2px);
+            background: 
+                linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) border-box;
+        }
+        .btn-outline:hover .btn-text {
+            filter: brightness(1.1);
+        }
+        .btn-outline:active {
+            transform: translateY(0);
+        }
+
+        .tag {
+            padding: 0.4rem 0.95rem;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 24px;
+            font-size: 0.87rem;
+            color: var(--text-primary);
+            transition: var(--transition);
+            cursor: default;
+            font-weight: 500;
+            text-decoration: none !important;
+            letter-spacing: -0.01em;
+        }
+        .tag:hover {
+            background: rgba(139, 92, 246, 0.25);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(139, 92, 246, 0.2);
+        }
+
+        section {
+            margin-bottom: 2.75rem;
+            padding: 1.75rem;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.8s ease-out both;
+            transition: var(--transition);
+        }
+        section:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+        
+        h2 {
+            font-size: 1.65rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary)) 1;
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        p { 
+            margin-bottom: 0.85rem; 
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        p a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        p a:hover { 
+            color: var(--accent-primary);
+            text-decoration: underline;
+        }
+        
+        ul {
+            padding-left: 1.6rem;
+            margin: 0.75rem 0;
+            color: var(--text-primary);
+        }
+        li { 
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
+        }
+        
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1rem;
+        }
+        
+        .publications li {
+            margin-bottom: 1rem;
+            padding-left: 0;
+            list-style: none;
+            padding: 0.75rem;
+            border-radius: 10px;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+        }
+        .publications li:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-left-color: var(--accent-secondary);
+            transform: translateX(4px);
+        }
+        .pub-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .pub-venue {
+            color: var(--accent-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .pub-authors {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+        
+        .highlight {
+            color: var(--accent-secondary);
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2.5rem 0 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 1.5rem;
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+        footer a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        footer a:hover { color: var(--accent-primary); }
+        
+        /* Dynamic particles background (lightweight) */
+        .particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @media (max-width: 700px) {
+            body { padding: 1.75rem 1.25rem; }
+            h1 { font-size: 2.3rem; }
+            .subtitle { font-size: 1.15rem; }
+            .affiliation { font-size: 0.95rem; }
+            .buttons { 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 0.5rem;
+            }
+            .btn { 
+                width: 100%; 
+                max-width: 340px; 
+                justify-content: center;
+                padding: 0.65rem 1.1rem;
+                font-size: 0.92rem;
+                border-radius: 12px;
+            }
+            section { padding: 1.4rem 1.2rem; }
+            h2 { font-size: 1.45rem; }
+            .research-tags { gap: 0.5rem; }
+            .tag { font-size: 0.82rem; padding: 0.35rem 0.8rem; }
+        }
+        
+        /* Scroll progress indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+
+        .navbar-top {
+            position: fixed;
+            top: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.4rem 0.9rem;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1.2rem;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            z-index: 999;
+            font-size: 0.88rem;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+        }
+        .navbar-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .navbar-top .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.25rem 0.4rem;
+            border-radius: 5px;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+            white-space: nowrap;
+        }
+        .navbar-top .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            transition: var(--transition);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .navbar-top .nav-link:hover,
+        .navbar-top .nav-link.active {
+            color: var(--accent-primary);
+        }
+        .navbar-top .nav-link:hover::after,
+        .navbar-top .nav-link.active::after {
+            width: 85%;
+        }
+        .navbar-top .nav-separator {
+            color: var(--border-color);
+            font-size: 0.75rem;
+            user-select: none;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Lightweight animated particles -->
+    <div class="particles" id="particles"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar-top" id="navbarTop" aria-label="Section navigation">
+        <a href="#Research" class="nav-link">Research</a>
+        <span class="nav-separator">·</span>
+        <a href="#Publications" class="nav-link">Publications</a>
+        <span class="nav-separator">·</span>
+        <a href="#Honors" class="nav-link">Honors</a>
+        <span class="nav-separator">·</span>
+        <a href="#Service" class="nav-link">Service</a>
+        <span class="nav-separator">·</span>
+        <a href="#Contact" class="nav-link">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Zecheng Hao's Academic Homepage</h1>
+        <p class="subtitle">Ph.D. Candidate @ PKU | Multimodal Large Language Models · Spiking Neural Networks</p>
+        <p class="affiliation">
+            National Engineering Research Center for Video Technology, Peking University<br>
+        </p>    
+        <div class="buttons">
+            <a href="https://github.com/hzc1208" target="_blank" class="btn btn-outline">💻 <span class="btn-text">GitHub</span></a>
+            <a href="https://scholar.google.com/citations?user=txTkX7YAAAAJ" target="_blank" class="btn btn-outline">🎓 <span class="btn-text">Google Scholar</span></a>
+            <a href="https://www.semanticscholar.org/author/Zecheng-Hao/2204581289" target="_blank" class="btn btn-outline">🔍 <span class="btn-text">Semantic Scholar</span></a>
+            <a href="https://www.researchgate.net/profile/Zecheng-Hao" target="_blank" class="btn btn-outline">🔬 <span class="btn-text">ResearchGate</span></a>
+            <a href="https://orcid.org/0000-0001-9074-2857" target="_blank" class="btn btn-outline">🆔 <span class="btn-text">ORCID</span></a>
+        </div>
+    </header>
+
+    <section id="Research">
+        <h2>🔬 Research Focus</h2>
+        <p>My research explores two complementary directions: <span class="highlight">multimodal large language models</span> (focusing on representation learning and interactive reasoning) and <span class="highlight">brain-inspired intelligence</span> (with emphasis on spiking neural networks and efficient learning algorithms). I aim to advance efficient, generalizable, and biologically plausible AI systems through both theoretical innovation and practical deployment.</p>
+        <div class="research-tags">
+            <span class="tag">Multimodal Large Language Models (MLLMs)</span>
+            <span class="tag">Spiking Neural Networks (SNNs)</span>
+            <span class="tag">ANN-SNN Conversion</span>
+            <span class="tag">Brain-Inspired Multimodal Models</span>
+            <span class="tag">Generative Models</span>
+            <span class="tag">Quantization-Aware Training & Post-Training Quantization</span>
+        </div>
+    </section>
+
+    <section id="Publications">
+        <h2>📚 Publications</h2>
+        <ul class="publications">
+            <li>
+                <span class="pub-title">Rethinking SNN Online Training and Deployment: Gradient-Coherent Learning via Hybrid-Driven LIF Model</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, Y Huang, Z Xu, W Liu, Y Tang, Z Yu, T Huang</span>
+                <span class="pub-venue">CVPR 2026</span>
+            </li>
+            <li>
+                <span class="pub-title">MIRA: Multi-view Information Retrieval with Adaptive Routing for Test-time Long-video Comprehension</span>
+                <span class="pub-authors"><strong>Z Hao<sup>*</sup></strong>, W Ma<sup>*</sup>, Y Cui, S Li, X Wang, T Huang</span>
+                <span class="pub-venue">TMLR</span>
+            </li>
+            <li>
+                <span class="pub-title">PT-BitNet: Scaling up the 1-Bit Large Language Model with Post-Training Quantization</span>
+                <span class="pub-authors">Y Guo<sup>*</sup>, <strong>Z Hao<sup>*</sup></strong>, J Shao, J Zhou, X Liu, X Tong, Y Zhang, Y Chen, W Peng, Z Ma</span>
+                <span class="pub-venue">Neural Networks</span>
+            </li>
+            <li>
+                <span class="pub-title">Faster and Stronger: When ANN-SNN Conversion Meets Parallel Spiking Calculation</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, Q Ma, K Chen, Y Zhang, Z Yu, T Huang</span>
+                <span class="pub-venue">ICML 2025</span>
+            </li>
+            <li>
+                <span class="pub-title">LM-HT SNN: Enhancing the Performance of SNN to ANN Counterpart through Learnable Multi-hierarchical Threshold Model</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, X Shi, Y Liu, Z Yu, T Huang</span>
+                <span class="pub-venue">NeurIPS 2024</span>
+            </li>
+            <li>
+                <span class="pub-title">A Progressive Training Framework for Spiking Neural Networks with Learnable Multi-hierarchical Model</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, X Shi, Z Huang, T Bu, Z Yu, T Huang</span>
+                <span class="pub-venue">ICLR 2024</span>
+            </li>
+            <li>
+                <span class="pub-title">Threaten Spiking Neural Networks through Combining Rate and Temporal Information</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, T Bu, X Shi, Z Huang, Z Yu, T Huang</span>
+                <span class="pub-venue">ICLR 2024</span>
+            </li>
+            <li>
+                <span class="pub-title">Bridging the Gap between ANNs and SNNs by Calibrating Offset Spikes</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, J Ding, T Bu, T Huang, Z Yu</span>
+                <span class="pub-venue">ICLR 2023</span>
+            </li>
+            <li>
+                <span class="pub-title">Reducing ANN-SNN Conversion Error through Residual Membrane Potential</span>
+                <span class="pub-authors"><strong>Z Hao</strong>, T Bu, J Ding, T Huang, Z Yu</span>
+                <span class="pub-venue">AAAI 2023</span>
+            </li>
+            <li style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary); border-left: none; padding-left: 0;">
+                * 20+ papers published, including 9 as first/co-first author
+            </li>
+        </ul>
+    </section>
+
+    <section id="Honors">
+        <h2>🏆 Honors & Awards</h2>
+        <ul>
+            <li>President's Scholarship, PKU (2024)</li>
+            <li>Top-10 Academic Scholars, School of EECS, PKU (2025)</li>
+            <li>Top-10 Academic Scholars Nominee, School of EECS, PKU (2024)</li>
+            <li>Huawei Scholarship, School of EECS, PKU (2025)</li>
+            <li>Top-10 Students, National Engineering Research Center for Video Technology, PKU (2024, 2025)</li>
+            <li>Excellent Research Award, PKU (2024)</li>
+            <li>Graduate Academic Exchange Fund, PKU (2024)</li>
+            <li>Excellent Undergraduate Thesis Award, PKU (2023)</li>
+        </ul>
+    </section>
+
+    <section id="Service">
+        <h2>💬 Academic Service</h2>
+        <p>Active reviewer for premier international journals and conferences:</p>
+        <p style="margin-top: 0.6rem; line-height: 2;">
+            <strong style="color: var(--accent-secondary);">NeurIPS</strong> · 
+            <strong style="color: var(--accent-secondary);">ICLR</strong> · 
+            <strong style="color: var(--accent-secondary);">ICML</strong> · 
+            <strong style="color: var(--accent-secondary);">CVPR</strong> · 
+            <strong style="color: var(--accent-secondary);">ICCV</strong> · 
+            <strong style="color: var(--accent-secondary);">AAAI</strong> · 
+            <strong style="color: var(--accent-secondary);">ACM MM</strong> · 
+            <strong style="color: var(--accent-secondary);">TNNLS</strong>
+        </p>
+    </section>
+
+    <section id="Contact">
+        <h2>✉️ Contact</h2>
+        <p style="color: var(--text-secondary); white-space: pre-line;">
+            📧 haozecheng@pku.edu.cn
+            🔍 Open to collaborations on MLLMs, SNNs and brain-inspired AI. Feel free to reach out!
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zecheng Hao. Crafted with ❤️ for the future of intelligent systems.</p>
+        <p style="margin-top: 0.6rem; font-size: 0.9rem;">
+            Last updated: March 2026 | 
+            <a href="https://github.com/hzc1208/hzc1208.github.io">Source Code</a>
+        </p>
+    </footer>
+
+    <script>
+        // ===== 1. Scroll progress indicator =====
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+            
+            const navbar = document.getElementById('navbarTop');
+            if (navbar) {
+                if (scrollTop > 100) {
+                    navbar.classList.add('visible');
+                } else {
+                    navbar.classList.remove('visible');
+                }
+            }
+            highlightCurrentSection();
+        });
+
+        // ===== 2. Lightweight animated particles =====
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            const particleCount = Math.min(30, Math.floor(window.innerWidth / 40));
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = (Math.random() * 6) + 's';
+                particle.style.animationDuration = (4 + Math.random() * 4) + 's';
+                particle.style.opacity = 0.3 + Math.random() * 0.5;
+                particle.style.width = particle.style.height = (2 + Math.random() * 4) + 'px';
+                container.appendChild(particle);
+            }
+        }
+        
+        // ===== 3. Smooth anchor scrolling =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 60;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                        updateActiveNav(href);
+                    }
+                }
+            });
+        });
+        
+        function updateActiveNav(href) {
+            document.querySelectorAll('.navbar-top .nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === href) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        function highlightCurrentSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-top .nav-link');
+            if (sections.length === 0 || navLinks.length === 0) return;
+            
+            let current = '';
+            const scrollY = window.pageYOffset + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+            
+            if (current) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
